@@ -1,0 +1,100 @@
+.project-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Button Styles */
+.card-action {
+    /* Default (Dark Mode): Black Button */
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 100px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Mode: White Button */
+[data-theme='light'] .card-action {
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.project-card:hover .card-action {
+    transform: translateY(0);
+    /* Hover (Dark Mode): Invert to White */
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+[data-theme='dark'] .project-card:hover .card-action {
+    /* Hover (Light Mode): Invert to Black */
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.project-card:hover .card-title {
+    color: var(--color-accent-light);
+}
+
+.card-category {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

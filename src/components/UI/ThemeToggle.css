@@ -1,0 +1,26 @@
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-primary);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: var(--color-text-primary);
+
+    [data-theme='light'] .theme-toggle:hover {
+        background: rgba(0, 0, 0, 0.1);
+        border-color: var(--color-text-primary);
+    }
+}
