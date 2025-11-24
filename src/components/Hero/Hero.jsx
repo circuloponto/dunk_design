@@ -25,7 +25,7 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        I'm a designer dedicated to building functional and beautiful
+                        I'm a web designer dedicated to building functional and beautiful
                         web experiences that help your business grow.
                     </motion.p>
 

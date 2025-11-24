@@ -26,7 +26,7 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
-                        I am a designer and developer with a passion for creating
+                        I am a web designer and developer with a passion for creating
                         exceptional digital experiences. I believe that design is not just about
                         how things look, but how they work and how they make people feel.
                     </motion.p>
